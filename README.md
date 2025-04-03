@@ -3,9 +3,9 @@
 [![Godot - v4.3](https://img.shields.io/badge/Godot-v4.3-478cbf?logo=godot-engine&labelColor=25282b)](https://godotengine.org/download/archive/4.3-stable/)
 [![Asset Library](https://img.shields.io/badge/Asset_Library-2ea44f)](https://godotengine.org/asset-library/asset/1924)
 
-![screenshot](https://github.com/Reun-Media/godot-levelblock/assets/37181529/94a5e1c3-e041-46d4-9961-d3cd526bf07a)
+![screenshot](https://github.com/ReunMedia/godot-levelblock/assets/37181529/94a5e1c3-e041-46d4-9961-d3cd526bf07a)
 
-_[Click here for Godot 3.5 version](https://github.com/Reun-Media/godot-levelblock/tree/godot-3)_
+_[Click here for Godot 3.5 version](https://github.com/ReunMedia/godot-levelblock/tree/godot-3)_
 
 **LevelBlock** is a new node for Godot 4 meant for the creation of levels in dungeon crawler -style games.
 
