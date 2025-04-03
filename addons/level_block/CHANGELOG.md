@@ -20,7 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.0] - 2022-12-15
 - Initial release
 
-[unreleased]: https://github.com/Reun-Media/godot-levelblock/compare/1.0.2...HEAD
-[1.0.2]: https://github.com/Reun-Media/godot-levelblock/compare/1.0.1...1.0.2
-[1.0.1]: https://github.com/Reun-Media/godot-levelblock/compare/1.0.0...1.0.1
-[1.0.0]: https://github.com/Reun-Media/godot-levelblock/releases/tag/1.0.0
+[unreleased]: https://github.com/ReunMedia/godot-levelblock/compare/1.0.2...HEAD
+[1.0.2]: https://github.com/ReunMedia/godot-levelblock/compare/1.0.1...1.0.2
+[1.0.1]: https://github.com/ReunMedia/godot-levelblock/compare/1.0.0...1.0.1
+[1.0.0]: https://github.com/ReunMedia/godot-levelblock/releases/tag/1.0.0
