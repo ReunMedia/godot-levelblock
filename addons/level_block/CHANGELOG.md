@@ -25,15 +25,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Support baking navigation meshes ([#15](https://github.com/Reun-Media/godot-levelblock/pull/15))
+- Support baking navigation meshes ([#15](https://github.com/ReunMedia/godot-levelblock/pull/15))
 
 ## [2.0.0] - 2023-06-07 - Godot 4 support
 
 **🎉 LevelBlock has been updated to support Godot 4! 🎉**
 
-Check out the [godot-3 branch](https://github.com/Reun-Media/godot-levelblock/tree/godot-3) for 1.x version that supports Godot 3.5.
+Check out the [godot-3 branch](https://github.com/ReunMedia/godot-levelblock/tree/godot-3) for 1.x version that supports Godot 3.5.
 
-Further development efforts will primarily be focused on the new version and we can't guarantee new features for Godot 3.5, but if you encounter any bugs feel free to [submit an issue](https://github.com/Reun-Media/godot-levelblock/issues) or [open a pull request](https://github.com/Reun-Media/godot-levelblock/pulls).
+Further development efforts will primarily be focused on the new version and we can't guarantee new features for Godot 3.5, but if you encounter any bugs feel free to [submit an issue](https://github.com/ReunMedia/godot-levelblock/issues) or [open a pull request](https://github.com/ReunMedia/godot-levelblock/pulls).
 
 ### Added
 
@@ -62,9 +62,9 @@ Further development efforts will primarily be focused on the new version and we 
 
 - Initial release
 
-[3.0.1]: https://github.com/Reun-Media/godot-levelblock/compare/3.0.0...3.0.1
-[3.0.0]: https://github.com/Reun-Media/godot-levelblock/compare/2.0.0...3.0.0
-[2.0.0]: https://github.com/Reun-Media/godot-levelblock/compare/1.0.2...2.0.0
-[1.0.2]: https://github.com/Reun-Media/godot-levelblock/compare/1.0.1...1.0.2
-[1.0.1]: https://github.com/Reun-Media/godot-levelblock/compare/1.0.0...1.0.1
-[1.0.0]: https://github.com/Reun-Media/godot-levelblock/releases/tag/1.0.0
+[3.0.1]: https://github.com/ReunMedia/godot-levelblock/compare/3.0.0...3.0.1
+[3.0.0]: https://github.com/ReunMedia/godot-levelblock/compare/2.0.0...3.0.0
+[2.0.0]: https://github.com/ReunMedia/godot-levelblock/compare/1.0.2...2.0.0
+[1.0.2]: https://github.com/ReunMedia/godot-levelblock/compare/1.0.1...1.0.2
+[1.0.1]: https://github.com/ReunMedia/godot-levelblock/compare/1.0.0...1.0.1
+[1.0.0]: https://github.com/ReunMedia/godot-levelblock/releases/tag/1.0.0
