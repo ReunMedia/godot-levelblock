@@ -5,6 +5,7 @@ signal texture_updated(new_texture)
 signal texture_size_updated(new_size)
 
 const size = 1.0
+const half_pi = PI / 2.0;
 
 @export var material:BaseMaterial3D = load("res://addons/level_block/default_material.tres")
 @export var texture_sheet:Texture2D = null : set = set_texture
@@ -70,6 +71,8 @@ func _ready():
 	refresh()
 
 func refresh():
+	if not texture_sheet is Texture2D:
+		return
 	clear()
 	faces = [north_face, east_face, south_face, west_face, top_face, bottom_face]
 	if faces.max() < 0:
@@ -134,7 +137,7 @@ func create_mesh() -> Mesh:
 	var rot_axis = [Vector3.DOWN, Vector3.LEFT]
 	if flip_faces:
 		normals = [Vector3.FORWARD, Vector3.RIGHT, Vector3.BACK, Vector3.LEFT, Vector3.UP, Vector3.DOWN]
-	var rot_angle = [0.0, PI / 2.0, PI, PI + (PI / 2), -(PI / 2.0), PI / 2.0]
+	var rot_angle = [0.0, half_pi, PI, PI + half_pi, -half_pi, half_pi]
 	
 	var st = SurfaceTool.new()
 	st.begin(Mesh.PRIMITIVE_TRIANGLES)
@@ -189,7 +192,7 @@ func create_mesh() -> Mesh:
 func create_occluders():
 	var positions = [Vector3.FORWARD, Vector3.RIGHT, Vector3.BACK, Vector3.LEFT, Vector3.UP, Vector3.DOWN]
 	var rot_axis = [Vector3.UP, Vector3.RIGHT]
-	var rot_angle = [0.0, -(PI / 2.0), PI, PI / 2, PI / 2.0, -(PI / 2.0)]
+	var rot_angle = [0.0, -half_pi, PI, half_pi, half_pi, -half_pi]
 	for i in range(6):
 		if faces[i] < 0:
 			continue
