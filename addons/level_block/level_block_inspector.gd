@@ -14,21 +14,19 @@ var face_paths := [
 
 
 func _can_handle(object):
-	if object is BlockNode:
-		return true
-	return false
+	return object is BlockNode
 
 func _parse_property(object, type, path, hint, hint_text, usage, wide):
-	if type == TYPE_INT:
-		for p in face_paths:
-			if p == path:
-				var selector := TextureSelector.new()
-				selector.texture_sheet = object.texture_sheet
-				object.connect("texture_updated", Callable(selector, "update_texture"))
-				object.connect("texture_size_updated", Callable(selector, "update_texture_size"))
-				selector.texture_size = object.texture_size
-				add_property_editor(path, selector)
-				return true
+	if type != TYPE_INT:
 		return false
-	else:
+
+	if not face_paths.has(path):
 		return false
+
+	var selector := TextureSelector.new()
+	selector.texture_sheet = object.texture_sheet
+	object.connect("texture_updated", Callable(selector, "update_texture"))
+	object.connect("texture_size_updated", Callable(selector, "update_texture_size"))
+	selector.texture_size = object.texture_size
+	add_property_editor(path, selector)
+	return true

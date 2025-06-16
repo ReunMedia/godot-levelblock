@@ -42,7 +42,6 @@ func _has_gizmo(node):
 func _redraw(gizmo):
 	gizmo.clear()
 	
-	var block = gizmo.get_node_3d() as LevelBlock
 	var cube := BoxMesh.new()
 	cube.size = Vector3.ONE * 2.0
 	gizmo.add_collision_triangles(cube.generate_triangle_mesh())
