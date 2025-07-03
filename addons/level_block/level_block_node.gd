@@ -18,6 +18,12 @@ func set_texture_size(new_value):
 	texture_size = new_value
 	emit_signal("texture_size_updated", texture_size)
 	refresh()
+## Shrinks the UV to prevent pixel bleed. A value of one is a full pixel.
+@export var uv_shrink:float = 0 : set = set_uv_shrink
+func set_uv_shrink(new_value):
+	uv_shrink = new_value
+	emit_signal("texture_size_updated", texture_size)
+	refresh()
 @export var north_face:int = -1 : set = set_north
 func set_north(new_value):
 	north_face = new_value
@@ -138,30 +144,31 @@ func create_mesh() -> Mesh:
 	if flip_faces:
 		normals = [Vector3.FORWARD, Vector3.RIGHT, Vector3.BACK, Vector3.LEFT, Vector3.UP, Vector3.DOWN]
 	var rot_angle = [0.0, half_pi, PI, PI + half_pi, -half_pi, half_pi]
+	var real_uv_shrink = (uv_shrink/texture_size)/4
 	
 	var st = SurfaceTool.new()
 	st.begin(Mesh.PRIMITIVE_TRIANGLES)
 	for i in range(6):
 		st.set_normal(normals[i])
-		st.set_uv(get_uv_position(faces[i]))
+		st.set_uv(get_uv_position(faces[i]) + Vector2(real_uv_shrink, real_uv_shrink))
 		var vertex_0 := Vector3(-size, size, -size)
 		vertex_0 = vertex_0.rotated(rot_axis[i / 4], rot_angle[i])
 		st.add_vertex(vertex_0)
 		
 		st.set_normal(normals[i])
-		st.set_uv(get_uv_position(faces[i]) + (get_uv_gap() * Vector2(1.0, 0.0)))
+		st.set_uv(get_uv_position(faces[i]) + (get_uv_gap() * Vector2(1.0, 0.0)) + Vector2(-real_uv_shrink, real_uv_shrink))
 		var vertex_1 := Vector3(size, size, -size)
 		vertex_1 = vertex_1.rotated(rot_axis[i / 4], rot_angle[i])
 		st.add_vertex(vertex_1)
 		
 		st.set_normal(normals[i])
-		st.set_uv(get_uv_position(faces[i]) + (get_uv_gap() * Vector2(1.0, 1.0)))
+		st.set_uv(get_uv_position(faces[i]) + (get_uv_gap() * Vector2(1.0, 1.0)) + Vector2(-real_uv_shrink, -real_uv_shrink))
 		var vertex_2 := Vector3(size, -size, -size)
 		vertex_2 = vertex_2.rotated(rot_axis[i / 4], rot_angle[i])
 		st.add_vertex(vertex_2)
 		
 		st.set_normal(normals[i])
-		st.set_uv(get_uv_position(faces[i]) + (get_uv_gap() * Vector2(0.0, 1.0)))
+		st.set_uv(get_uv_position(faces[i]) + (get_uv_gap() * Vector2(0.0, 1.0)) + Vector2(real_uv_shrink, -real_uv_shrink))
 		var vertex_3 := Vector3(-size, -size, -size)
 		vertex_3 = vertex_3.rotated(rot_axis[i / 4], rot_angle[i])
 		st.add_vertex(vertex_3)
