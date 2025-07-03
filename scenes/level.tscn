@@ -1,12 +1,12 @@
 [gd_scene load_steps=18 format=3 uid="uid://dpsaib3a8pgyg"]
 
-[ext_resource type="PackedScene" path="res://scenes/entity/player.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://bapl1c2p7ohu7" path="res://scenes/entity/player.tscn" id="1"]
 [ext_resource type="Texture2D" uid="uid://bly3ltto83k3r" path="res://assets/tileset.png" id="2"]
-[ext_resource type="Script" path="res://scenes/entity/door.gd" id="3"]
+[ext_resource type="Script" uid="uid://bkagwybxqekgl" path="res://scenes/entity/door.gd" id="3"]
 [ext_resource type="Texture2D" uid="uid://dul4gcwu55m0b" path="res://addons/level_block/example_tileset.png" id="3_c3ffj"]
-[ext_resource type="Script" path="res://addons/level_block/level_block_node.gd" id="4"]
+[ext_resource type="Script" uid="uid://cymup6e7hhyak" path="res://addons/level_block/level_block_node.gd" id="4"]
 [ext_resource type="Material" uid="uid://c71yladfjhgud" path="res://addons/level_block/default_material.tres" id="5"]
-[ext_resource type="Script" path="res://scenes/entity/button_block.gd" id="6"]
+[ext_resource type="Script" uid="uid://b0s00r4hmiwd7" path="res://scenes/entity/button_block.gd" id="6"]
 
 [sub_resource type="Sky" id="1"]
 
@@ -70,8 +70,8 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_06ubn"]
 _data = {
-"RESET": SubResource("7"),
-"open": SubResource("8")
+&"RESET": SubResource("7"),
+&"open": SubResource("8")
 }
 
 [sub_resource type="BoxShape3D" id="3"]
