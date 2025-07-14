@@ -144,7 +144,7 @@ func create_mesh() -> Mesh:
 	if flip_faces:
 		normals = [Vector3.FORWARD, Vector3.RIGHT, Vector3.BACK, Vector3.LEFT, Vector3.UP, Vector3.DOWN]
 	var rot_angle = [0.0, half_pi, PI, PI + half_pi, -half_pi, half_pi]
-	var real_uv_shrink = (uv_shrink/texture_size)/4
+	var real_uv_shrink = (uv_shrink / texture_size) * get_uv_gap()
 	
 	var st = SurfaceTool.new()
 	st.begin(Mesh.PRIMITIVE_TRIANGLES)
