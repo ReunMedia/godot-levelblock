@@ -24,7 +24,7 @@ This node acts as an inside-facing cube, using a texture atlas sheet to display 
 
 - Use a single texture sheet, with each face displaying a different part of it using an index value. This texture sheet will replace the albedo texture of the material.
 - Customize the material or use the included default material.
-- Use an arbitary size for the square textures in the atlas.
+- Use an arbitrary size for the square textures in the atlas.
 - Quickly customize the texture displayed on each face.
 - Automatic collision generation for visible faces.
 - Automatic occluder node generation for visible faces.
