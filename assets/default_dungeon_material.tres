@@ -1,7 +1,0 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=2]
-
-[ext_resource path="res://assets/tileset.png" type="Texture2D" id=1]
-
-[resource]
-flags_unshaded = true
-albedo_texture = ExtResource( 1 )
