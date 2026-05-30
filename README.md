@@ -1,6 +1,7 @@
 # LevelBlock plugin for Godot 4
 
 [![Godot - v4.3](https://img.shields.io/badge/Godot-v4.3-478cbf?logo=godot-engine&labelColor=25282b)](https://godotengine.org/download/archive/4.3-stable/)
+[![Asset Store](https://img.shields.io/badge/Asset_Store-2ea44f)](https://store.godotengine.org/asset/reunmedia/levelblock/)
 [![Asset Library](https://img.shields.io/badge/Asset_Library-2ea44f)](https://godotengine.org/asset-library/asset/1924)
 
 ![screenshot](https://github.com/ReunMedia/godot-levelblock/assets/37181529/94a5e1c3-e041-46d4-9961-d3cd526bf07a)
@@ -13,7 +14,7 @@ This node acts as an inside-facing cube, using a texture atlas sheet to display 
 
 ## Getting started
 
-1. Download the plugin from GitHub or [Godot Asset Library](https://godotengine.org/asset-library/asset/1924) and install it. See a guide here: [Godot Docs](https://docs.godotengine.org/en/stable/tutorials/plugins/editor/installing_plugins.html)
+1. Download the plugin from [GitHub](https://github.com/ReunMedia/godot-levelblock/releases) or [Godot Asset Store](https://store.godotengine.org/asset/reunmedia/levelblock/) and install it. See a guide here: [Godot Docs](https://docs.godotengine.org/en/stable/tutorials/plugins/editor/installing_plugins.html)
 2. Add new LevelBlock nodes to your scene.
 3. Configure the texture sheet (and optionally material) you want to use.
 4. Configure the size of the square textures contained in the texture sheet.
