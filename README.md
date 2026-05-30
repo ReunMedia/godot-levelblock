@@ -1,6 +1,6 @@
 # LevelBlock plugin for Godot 4
 
-[![Godot - v4.3](https://img.shields.io/badge/Godot-v4.3-478cbf?logo=godot-engine&labelColor=25282b)](https://godotengine.org/download/archive/4.3-stable/)
+[![Godot - v4.3+](https://img.shields.io/badge/Godot-v4.3%2B-478cbf?logo=godot-engine&labelColor=25282b)](https://godotengine.org/download/archive/4.3-stable/)
 [![Asset Store](https://img.shields.io/badge/Asset_Store-2ea44f)](https://store.godotengine.org/asset/reunmedia/levelblock/)
 [![Asset Library](https://img.shields.io/badge/Asset_Library-2ea44f)](https://godotengine.org/asset-library/asset/1924)
 
