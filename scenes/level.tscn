@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dpsaib3a8pgyg"]
+[gd_scene format=3 uid="uid://dpsaib3a8pgyg"]
 
 [ext_resource type="PackedScene" uid="uid://bapl1c2p7ohu7" path="res://scenes/entity/player.tscn" id="1"]
 [ext_resource type="Texture2D" uid="uid://dul4gcwu55m0b" path="res://addons/level_block/example_tileset.png" id="2"]
@@ -99,68 +99,66 @@ texture_filter = 0
 vertices = PackedVector3Array(-0.75, -0.5, -2.25, -2.25, -0.5, -2.25, -2.25, -0.5, -0.75, -5.25, -0.5, -0.25, -5.5, -0.5, -2.25, -8.25, -0.5, -2.25, -8.25, -0.5, 0.5, 0.5, -0.5, -9.25, -0.25, -0.5, -9.25, -0.25, -0.5, -2.75, 0.5, -0.5, -2.5, -2.5, -0.5, 0.5, -2.75, -0.5, -0.25, -2.25, -0.5, 2.25, 2.5, -0.5, 2.25, 4.5, -0.5, -9.5, 4.5, -0.5, -10.25, -4.25, -0.5, -10.25, -4.25, -0.5, -9.5, 2.5, -0.5, -2.25)
 polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(4, 3, 5), PackedInt32Array(5, 3, 6), PackedInt32Array(8, 7, 9), PackedInt32Array(9, 7, 10), PackedInt32Array(12, 11, 3), PackedInt32Array(3, 11, 6), PackedInt32Array(9, 10, 0), PackedInt32Array(0, 10, 13), PackedInt32Array(13, 10, 14), PackedInt32Array(2, 11, 12), PackedInt32Array(11, 2, 13), PackedInt32Array(13, 2, 0), PackedInt32Array(18, 17, 8), PackedInt32Array(8, 17, 7), PackedInt32Array(7, 17, 15), PackedInt32Array(15, 17, 16), PackedInt32Array(10, 19, 14)]
 
-[node name="Level" type="Node3D"]
+[node name="Level" type="Node3D" unique_id=1833549275]
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=297517741]
 environment = SubResource("2")
 
-[node name="OmniLight3D" type="OmniLight3D" parent="."]
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=986782749]
 light_energy = 2.0
 omni_range = 6.0
 
-[node name="OmniLight3" type="OmniLight3D" parent="."]
+[node name="OmniLight3" type="OmniLight3D" parent="." unique_id=2048790544]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, -1)
 light_color = Color(0.596078, 1, 0.737255, 1)
 omni_range = 6.0
 
-[node name="OmniLight2" type="OmniLight3D" parent="."]
+[node name="OmniLight2" type="OmniLight3D" parent="." unique_id=1237158027]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10)
 light_color = Color(1, 0.854167, 0.75, 1)
 omni_range = 6.0
 
-[node name="OmniLight4" type="OmniLight3D" parent="."]
+[node name="OmniLight4" type="OmniLight3D" parent="." unique_id=614465485]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
 light_color = Color(1, 0.854167, 0.75, 1)
 omni_range = 6.0
 
-[node name="Player" parent="." instance=ExtResource("1")]
+[node name="Player" parent="." unique_id=1310416911 instance=ExtResource("1")]
 
-[node name="Door" type="AnimatableBody3D" parent="."]
+[node name="Door" type="AnimatableBody3D" parent="." unique_id=905562687]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
 script = ExtResource("3")
 
-[node name="Animation" type="AnimationPlayer" parent="Door"]
-libraries = {
-&"": SubResource("AnimationLibrary_06ubn")
-}
+[node name="Animation" type="AnimationPlayer" parent="Door" unique_id=94368225]
+libraries/ = SubResource("AnimationLibrary_06ubn")
 
-[node name="Shape3D" type="CollisionShape3D" parent="Door"]
+[node name="Shape3D" type="CollisionShape3D" parent="Door" unique_id=2062510962]
 shape = SubResource("3")
 
-[node name="L" type="Node3D" parent="Door"]
+[node name="L" type="Node3D" parent="Door" unique_id=461039495]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 1)
 
-[node name="Mesh" type="MeshInstance3D" parent="Door/L"]
+[node name="Mesh" type="MeshInstance3D" parent="Door/L" unique_id=280612219]
 transform = Transform3D(1, 0, 0, 0, 2, 0, 0, 0, 1, 0.5, 0, 0)
 mesh = SubResource("4")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_pyiqm")
 
-[node name="R" type="Node3D" parent="Door"]
+[node name="R" type="Node3D" parent="Door" unique_id=121812320]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1)
 
-[node name="Mesh" type="MeshInstance3D" parent="Door/R"]
+[node name="Mesh" type="MeshInstance3D" parent="Door/R" unique_id=1399682913]
 transform = Transform3D(1, 0, 0, 0, 2, 0, 0, 0, 1, -0.5, 0, 0)
 material_override = SubResource("StandardMaterial3D_bsl20")
 mesh = SubResource("4")
 skeleton = NodePath("../..")
 
-[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=1013790260]
 navigation_mesh = SubResource("NavigationMesh_4w2hk")
 
-[node name="Level" type="Node3D" parent="NavigationRegion3D"]
+[node name="Level" type="Node3D" parent="NavigationRegion3D" unique_id=1667327273]
 
-[node name="LevelBlock" type="Node3D" parent="NavigationRegion3D/Level"]
+[node name="LevelBlock" type="Node3D" parent="NavigationRegion3D/Level" unique_id=1322295752]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -2)
 script = ExtResource("4")
 material = ExtResource("5")
@@ -171,7 +169,7 @@ top_face = 5
 bottom_face = 4
 generate_occluders = true
 
-[node name="LevelBlock2" type="Node3D" parent="NavigationRegion3D/Level"]
+[node name="LevelBlock2" type="Node3D" parent="NavigationRegion3D/Level" unique_id=404145138]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
 script = ExtResource("4")
 material = ExtResource("5")
@@ -180,7 +178,7 @@ top_face = 5
 bottom_face = 4
 generate_occluders = true
 
-[node name="LevelBlock10" type="Node3D" parent="NavigationRegion3D/Level"]
+[node name="LevelBlock10" type="Node3D" parent="NavigationRegion3D/Level" unique_id=510621811]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
 script = ExtResource("4")
 material = ExtResource("5")
@@ -191,7 +189,7 @@ top_face = 5
 bottom_face = 4
 generate_occluders = true
 
-[node name="LevelBlock11" type="Node3D" parent="NavigationRegion3D/Level"]
+[node name="LevelBlock11" type="Node3D" parent="NavigationRegion3D/Level" unique_id=1343855519]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6)
 script = ExtResource("4")
 material = ExtResource("5")
@@ -202,7 +200,7 @@ top_face = 5
 bottom_face = 4
 generate_occluders = true
 
-[node name="LevelBlock12" type="Node3D" parent="NavigationRegion3D/Level"]
+[node name="LevelBlock12" type="Node3D" parent="NavigationRegion3D/Level" unique_id=2033064688]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8)
 script = ExtResource("4")
 material = ExtResource("5")
@@ -213,7 +211,7 @@ top_face = 5
 bottom_face = 4
 generate_occluders = true
 
-[node name="LevelBlock13" type="Node3D" parent="NavigationRegion3D/Level"]
+[node name="LevelBlock13" type="Node3D" parent="NavigationRegion3D/Level" unique_id=341137700]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10)
 script = ExtResource("4")
 material = ExtResource("5")
@@ -223,7 +221,7 @@ top_face = 5
 bottom_face = 4
 generate_occluders = true
 
-[node name="LevelBlock14" type="Node3D" parent="NavigationRegion3D/Level"]
+[node name="LevelBlock14" type="Node3D" parent="NavigationRegion3D/Level" unique_id=408268893]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -10)
 script = ExtResource("4")
 material = ExtResource("5")
@@ -234,7 +232,7 @@ top_face = 5
 bottom_face = 4
 generate_occluders = true
 
-[node name="LevelBlock15" type="Node3D" parent="NavigationRegion3D/Level"]
+[node name="LevelBlock15" type="Node3D" parent="NavigationRegion3D/Level" unique_id=2031971304]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -10)
 script = ExtResource("4")
 material = ExtResource("5")
@@ -245,7 +243,7 @@ top_face = 5
 bottom_face = 4
 generate_occluders = true
 
-[node name="LevelBlock17" type="Node3D" parent="NavigationRegion3D/Level"]
+[node name="LevelBlock17" type="Node3D" parent="NavigationRegion3D/Level" unique_id=1071721468]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -10)
 script = ExtResource("4")
 material = ExtResource("5")
@@ -257,7 +255,7 @@ top_face = 5
 bottom_face = 4
 generate_occluders = true
 
-[node name="LevelBlock16" type="Node3D" parent="NavigationRegion3D/Level"]
+[node name="LevelBlock16" type="Node3D" parent="NavigationRegion3D/Level" unique_id=2114337658]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -10)
 script = ExtResource("4")
 material = ExtResource("5")
@@ -269,7 +267,7 @@ top_face = 5
 bottom_face = 4
 generate_occluders = true
 
-[node name="LevelBlock3" type="Node3D" parent="NavigationRegion3D/Level"]
+[node name="LevelBlock3" type="Node3D" parent="NavigationRegion3D/Level" unique_id=464493893]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -2)
 script = ExtResource("4")
 material = ExtResource("5")
@@ -280,7 +278,7 @@ top_face = 5
 bottom_face = 4
 generate_occluders = true
 
-[node name="ButtonBlock" type="Node3D" parent="NavigationRegion3D/Level"]
+[node name="ButtonBlock" type="Node3D" parent="NavigationRegion3D/Level" unique_id=1533868596]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
 script = ExtResource("6")
 material = ExtResource("5")
@@ -289,7 +287,7 @@ east_face = 7
 top_face = 5
 bottom_face = 4
 
-[node name="LevelBlock5" type="Node3D" parent="NavigationRegion3D/Level"]
+[node name="LevelBlock5" type="Node3D" parent="NavigationRegion3D/Level" unique_id=1600471805]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 2)
 script = ExtResource("4")
 material = ExtResource("5")
@@ -300,7 +298,7 @@ top_face = 5
 bottom_face = 4
 generate_occluders = true
 
-[node name="LevelBlock6" type="Node3D" parent="NavigationRegion3D/Level"]
+[node name="LevelBlock6" type="Node3D" parent="NavigationRegion3D/Level" unique_id=1912220976]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
 script = ExtResource("4")
 material = ExtResource("5")
@@ -310,7 +308,7 @@ top_face = 5
 bottom_face = 4
 generate_occluders = true
 
-[node name="LevelBlock7" type="Node3D" parent="NavigationRegion3D/Level"]
+[node name="LevelBlock7" type="Node3D" parent="NavigationRegion3D/Level" unique_id=550802032]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 2)
 script = ExtResource("4")
 material = ExtResource("5")
@@ -321,7 +319,7 @@ top_face = 5
 bottom_face = 4
 generate_occluders = true
 
-[node name="LevelBlock8" type="Node3D" parent="NavigationRegion3D/Level"]
+[node name="LevelBlock8" type="Node3D" parent="NavigationRegion3D/Level" unique_id=993786719]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
 script = ExtResource("4")
 material = ExtResource("5")
@@ -330,7 +328,7 @@ top_face = 5
 bottom_face = 4
 generate_occluders = true
 
-[node name="LevelBlock19" type="Node3D" parent="NavigationRegion3D/Level"]
+[node name="LevelBlock19" type="Node3D" parent="NavigationRegion3D/Level" unique_id=1616884264]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
 script = ExtResource("4")
 material = ExtResource("5")
@@ -341,7 +339,7 @@ top_face = 5
 bottom_face = 4
 generate_occluders = true
 
-[node name="LevelBlock20" type="Node3D" parent="NavigationRegion3D/Level"]
+[node name="LevelBlock20" type="Node3D" parent="NavigationRegion3D/Level" unique_id=1755730245]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 0)
 script = ExtResource("4")
 material = ExtResource("5")
@@ -351,7 +349,7 @@ top_face = 5
 bottom_face = 4
 generate_occluders = true
 
-[node name="LevelBlock21" type="Node3D" parent="NavigationRegion3D/Level"]
+[node name="LevelBlock21" type="Node3D" parent="NavigationRegion3D/Level" unique_id=2029791195]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 0)
 script = ExtResource("4")
 material = ExtResource("5")
@@ -362,7 +360,7 @@ top_face = 5
 bottom_face = 4
 generate_occluders = true
 
-[node name="LevelBlock22" type="Node3D" parent="NavigationRegion3D/Level"]
+[node name="LevelBlock22" type="Node3D" parent="NavigationRegion3D/Level" unique_id=890605324]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -2)
 script = ExtResource("4")
 material = ExtResource("5")
@@ -373,7 +371,7 @@ top_face = 5
 bottom_face = 4
 generate_occluders = true
 
-[node name="LevelBlock23" type="Node3D" parent="NavigationRegion3D/Level"]
+[node name="LevelBlock23" type="Node3D" parent="NavigationRegion3D/Level" unique_id=981901027]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -2)
 script = ExtResource("4")
 material = ExtResource("5")
@@ -384,7 +382,7 @@ top_face = 5
 bottom_face = 4
 generate_occluders = true
 
-[node name="FalseWall" type="Node3D" parent="NavigationRegion3D/Level"]
+[node name="FalseWall" type="Node3D" parent="NavigationRegion3D/Level" unique_id=473917817]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.02381, 0, 0.00627279)
 script = ExtResource("4")
 material = ExtResource("5")
@@ -393,7 +391,7 @@ east_face = 9
 generate_collision = false
 generate_occluders = true
 
-[node name="FalseWall2" type="Node3D" parent="NavigationRegion3D/Level"]
+[node name="FalseWall2" type="Node3D" parent="NavigationRegion3D/Level" unique_id=1724264760]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.02381, 0, 0.00627279)
 script = ExtResource("4")
 material = ExtResource("5")
@@ -402,14 +400,14 @@ west_face = 0
 generate_collision = false
 generate_occluders = true
 
-[node name="LevelBlock9" type="Node3D" parent="NavigationRegion3D/Level"]
+[node name="LevelBlock9" type="Node3D" parent="NavigationRegion3D/Level" unique_id=1079754885]
 script = ExtResource("4")
 material = ExtResource("5")
 texture_sheet = ExtResource("2")
 bottom_face = 14
 generate_occluders = true
 
-[node name="LevelBlock18" type="Node3D" parent="NavigationRegion3D/Level"]
+[node name="LevelBlock18" type="Node3D" parent="NavigationRegion3D/Level" unique_id=1100417604]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 script = ExtResource("4")
 material = ExtResource("5")

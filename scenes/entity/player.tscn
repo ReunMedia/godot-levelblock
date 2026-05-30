@@ -1,9 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://bapl1c2p7ohu7"]
+[gd_scene format=3 uid="uid://bapl1c2p7ohu7"]
 
 [ext_resource type="Script" uid="uid://cvnqlg43ng03g" path="res://scenes/entity/player.gd" id="1"]
 
-[node name="Player" type="Node3D"]
+[node name="Player" type="Node3D" unique_id=1589261366]
 script = ExtResource("1")
 
-[node name="Camera3D" type="Camera3D" parent="."]
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1322949540]
 fov = 90.0
